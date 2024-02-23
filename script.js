@@ -12,8 +12,8 @@ function getComputerChoice() {
 }
 
 function playRound(playerSelection, computerSelection) {
-  playerSelection == playerSelection.charAt(0).toUpperCase() + word.slice(1); //making user input case insensitive and capitlize first char
-  
+  playerSelection == playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1); //making user input case insensitive and capitlize first char
+
   if (playerSelection == computerSelection) {
     return ("Tie! Both picked " + playerSelection);
   }else if (playerSelection == "Scissors" && computerSelection == "Paper") {
@@ -28,25 +28,36 @@ function playRound(playerSelection, computerSelection) {
 }
 
 function playGame() {
-  let player = 0;
+  console.log("working")
+  const selections = document.querySelectorAll("#buttons button");
   let computer = 0;
+  let player = 0;
+  let clickedButton = null;
 
-  const win = 'You win!'
-  const lose = 'You lose!'
+  selections.forEach((button) => {
 
-  for (let i = 0; i < 5; i++) {
-    let choose = prompt("Rock, Paper or Scissors?");
-    let result = playRound(choose,getComputerChoice)
+    button.addEventListener('click', () => {
+      let result = playRound(button.id, getComputerChoice());
+      console.log(result);
+    })
 
-    if (result.includes(win)) {
-      player += 1;
-    }else if (result.includes(lose)) {
-      computer += 1;
-    }
-  }
+  })
   
+
+
 }
 
 //const playerSelection = "rock";
 //const computerSelection = getComputerChoice();
 //console.log(playRound(playerSelection, computerSelection));
+
+//for (let i = 0; i < 5; i++) {
+//  let choose = prompt("Rock, Paper or Scissors?");
+//  let result = playRound(choose,getComputerChoice)
+
+//  if (result.includes(win)) {
+//   player += 1;
+//  }else if (result.includes(lose)) {
+//    computer += 1;
+//  }
+//}
