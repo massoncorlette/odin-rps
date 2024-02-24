@@ -32,20 +32,38 @@ function playGame() {
   const selections = document.querySelectorAll("#buttons button");
   let computer = 0;
   let player = 0;
-  let clickedButton = null;
+  let result = '';
 
   selections.forEach((button) => {
 
     button.addEventListener('click', () => {
-      let result = playRound(button.id, getComputerChoice());
+      result = playRound(button.id, getComputerChoice());
       console.log(result);
-    })
+      document.getElementById("result").innerHTML = result;
+      // conditionals are moved inside the event listener loop // result remains empty unless button clicked
+      if (result.includes("win")) {
+        player += 1;
+      }else if (result.includes("lose")) {
+        computer += 1;
+      }
+    
+      if (computer == 5) {
+        document.getElementById("result").innerHTML = "Game Over. You lose.";
+        computer = 0, player = 0;
+        return;
+      }else if (player == 5) {
+        document.getElementById("result").innerHTML = "Game Over. You win.";
+        computer = 0, player = 0;
+        return;
+      }
+    }) 
 
   })
-  
-
+  return;
 
 }
+
+playGame();
 
 //const playerSelection = "rock";
 //const computerSelection = getComputerChoice();

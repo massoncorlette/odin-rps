@@ -1,0 +1,19 @@
+* {border: 1px Solid red}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  
+}
+
+.header {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.content {
+ 
+}
