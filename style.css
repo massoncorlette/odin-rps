@@ -4,16 +4,61 @@ body {
   font-family: 'Montserrat', sans-serif;
   min-height: 100vh;
   display: flex;
-  flex: 1;
   flex-direction: column;
-  
-}
+  justify-content: space-between;
+  }
 
 .header {
   font-size: 24px;
   font-weight: bold;
+  display: flex;
+  justify-content: center;
 }
 
 .content {
- 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  }
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+}
+
+.score {
+  margin-right: 800px;
+}
+
+#Rock, #Paper, #Scissors {
+    border: none; 
+    color: transparent;
+    background-color: rgba(0, 0, 0, 0); /*ensures clear background */
+    
+    width: 200px; 
+    height: 260px; 
+    cursor: pointer; 
+    transition: 0.5s ease;
+}
+
+#Rock:hover, #Paper:hover, #Scissors:hover {
+  transform: scale(1.1);  /* adding hover effect */
+}
+
+#Rock {
+  background-image: url('images/rock.png'); 
+  background-size: cover;
+}
+
+#Paper {
+  background-image: url('images/paper.png'); /* Add the path to your image */
+  background-size: cover;
+  width: 250px;
+  height:270px;
+}
+
+#Scissors {
+  background-image: url('images/scissors.png'); /* Add the path to your image */
+  background-size: cover;
 }

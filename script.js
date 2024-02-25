@@ -29,7 +29,7 @@ function playRound(playerSelection, computerSelection) {
 
 function playGame() {
   console.log("working")
-  const selections = document.querySelectorAll("#buttons button");
+  const selections = document.querySelectorAll(".buttons button");
   let computer = 0;
   let player = 0;
   let result = '';
