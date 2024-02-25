@@ -6,6 +6,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  background-image: url(images/cruncheduppaper.jpg);
   }
 
 .header {
@@ -28,7 +29,20 @@ body {
 }
 
 .score {
-  margin-right: 800px;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 630px;
+  font-weight: bold;
+}
+
+.output {
+  display: flex;
+  gap: 50px;
+}
+
+.score-margin {
+  display: flex;
 }
 
 #Rock, #Paper, #Scissors {

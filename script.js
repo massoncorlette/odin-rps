@@ -43,8 +43,10 @@ function playGame() {
       // conditionals are moved inside the event listener loop // result remains empty unless button clicked
       if (result.includes("win")) {
         player += 1;
+        document.getElementById("human-score").innerHTML = player;
       }else if (result.includes("lose")) {
         computer += 1;
+        document.getElementById("computer-score").innerHTML = computer;
       }
     
       if (computer == 5) {
