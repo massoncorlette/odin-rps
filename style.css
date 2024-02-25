@@ -1,4 +1,4 @@
-* {border: 1px Solid red}
+* {border: 0px Solid red}
 
 body {
   font-family: 'Montserrat', sans-serif;
@@ -28,12 +28,24 @@ body {
   gap: 100px;
 }
 
+#result {
+  font-size: 20px;
+}
+
+.result-box {
+  margin-top: 40px;
+}
+
 .score {
   display:flex;
-  flex-direction: column;
   align-items: center;
-  margin-right: 630px;
+  gap: 100px;
   font-weight: bold;
+}
+
+#score {
+  font-size: 24px;
+  text-align: center;
 }
 
 .output {
@@ -75,4 +87,8 @@ body {
 #Scissors {
   background-image: url('images/scissors.png'); /* Add the path to your image */
   background-size: cover;
+}
+
+#footer {
+  text-align: center;
 }

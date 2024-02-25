@@ -32,6 +32,8 @@ function playGame() {
   const selections = document.querySelectorAll(".buttons button");
   let computer = 0;
   let player = 0;
+  let total_computer = 0;
+  let total_human = 0;
   let result = '';
 
   selections.forEach((button) => {
@@ -52,10 +54,18 @@ function playGame() {
       if (computer == 5) {
         document.getElementById("result").innerHTML = "Game Over. You lose.";
         computer = 0, player = 0;
+        total_computer += 1;
+        document.getElementById("total-computer-score").innerHTML = total_computer;
+        document.getElementById("human-score").innerHTML = player;
+        document.getElementById("computer-score").innerHTML = computer
         return;
       }else if (player == 5) {
         document.getElementById("result").innerHTML = "Game Over. You win.";
         computer = 0, player = 0;
+        total_human += 1;
+        document.getElementById("total-human-score").innerHTML = total_human;
+        document.getElementById("human-score").innerHTML = player;
+        document.getElementById("computer-score").innerHTML = computer
         return;
       }
     }) 
