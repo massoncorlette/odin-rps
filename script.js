@@ -29,7 +29,7 @@ function playRound(playerSelection, computerSelection) {
 
 function playGame() {
   console.log("working")
-  const selections = document.querySelectorAll("#buttons button");
+  const selections = document.querySelectorAll(".buttons button");
   let computer = 0;
   let player = 0;
   let result = '';
@@ -43,8 +43,10 @@ function playGame() {
       // conditionals are moved inside the event listener loop // result remains empty unless button clicked
       if (result.includes("win")) {
         player += 1;
+        document.getElementById("human-score").innerHTML = player;
       }else if (result.includes("lose")) {
         computer += 1;
+        document.getElementById("computer-score").innerHTML = computer;
       }
     
       if (computer == 5) {
